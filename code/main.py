@@ -1,10 +1,10 @@
-/*
-main.py
-(c) alexcarchiar
-Code tailor made for lupus
-*/
+######
+#main.py
+#(c) alexcarchiar
+#Code tailor made for lupus
+######
 
-import cards.py
+import cards
 
 def show_rules():
 	print("""Made by alexcarchiar
@@ -44,8 +44,14 @@ Ghosts (dead people) can't talk, or at least not about the game. They may open t
 No talking during the night.
 In case of a draw, there needs to be a runoff where you can vote only for the two (or three) people with most votes.""")
 
+
+
 def main():
 	choice = None
 	print("Welcome to werewolves by alexcarchiar.\nThis program is used to help the narrator do his job, especially when there are no cards laying around")
-	print("Do you need to see the rules? Y\\N?")
-	show_rules()
+	choice = str(raw_input("Do you need to see the rules? Y\\N?"))
+	if(choice.isupper() == "Y"):
+		show_rules()
+	
+
+main()

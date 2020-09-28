@@ -1,10 +1,10 @@
-/*
-cards.py
-(c) alexcarchiar
-Code tailor made for lupus
-*/
+######
+#cards.py
+#(c) alexcarchiar
+#Code tailor made for lupus
+######
 
-roles = {
+roles_description = {
 	"villager" : "they have no powers. They have to guess the wolves and vote them out during the day",
 	"medium" : "he/she is called once every two turns. He/she can ask the narrator to reveal if one of the dead players was good or bad.",
 	"foreseer" : "he/she is called once every two turns (usually when you don't call the Medium). He/she does the same thing as the Medium but only for players who are not dead yet.",
@@ -15,7 +15,7 @@ roles = {
 	"owl" : "he/she decides one person each turn who starts with two votes on his head.",
 	"onionboy" : "a villager who smells like onion. It is just a joke character that has no special powers other than making my friends happy.",
 	"cupid" : "he/she decides two lovers that will be bound for the rest of the game: if one dies, the other one dies too. The two lovers can also be both good guys, one good guy and a bad guy and both bad guys.",
-	"sorcerer" : "he/she has two potions, both for a one time use. One is to revive someone from the dead, the other one is to instantly kill someone else."
+	"sorcerer" : "he/she has two potions, both for a one time use. One is to revive someone from the dead, the other one is to instantly kill someone else.",
 	"wolves" : "every night they are called and they decides who to devour (kill).",
 	"wolf's son" : "he/she starts as a normal villager but if the wolves try and kill him/her, he/she does not die and becomes a wolf. He/she is then activated. From the Medium or Foreseer's perspective, the Wolf's son is always a bad guy. Note that, if the Wolf's son is not killed by the wolves during the night, he/she does not get activated.",
 	"white wolf" : "a single wolf who is called once every two/threee turns (it depends on how many players are there) and has to kill all of the wolves and all of the good guys in order to win.",
@@ -46,9 +46,9 @@ class Player:
 		print("The player is a" + self.card.role + " . The card's id is: " + self.card.id)
 
 	def is_alive(self):
-		if(self.alive == 1):
+		#if(self.alive == 1):
 			#print("The player " + self.name + " is alive")
-		else:
+		#else:
 			#print("The player " + self.name + " is dead")
 		return self.alive
 
