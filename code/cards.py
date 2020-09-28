@@ -23,7 +23,7 @@ roles_description = {
 }
 
 class Card:
-	def __init__(role, ide):
+	def __init__(self, role, ide):
 		self.role = role #determines the role of a card
 		self.id = ide #determines the unique id of a card
 
@@ -34,10 +34,11 @@ class Card:
 		return self.id
 
 class Player:
-	def __init__(name):
+	def __init__(self, name, ide):
 		self.name = name
 		self.alive = 1
 		self.card = None
+		self.id = ide
 
 	def give_card(self, card):
 		self.card = card
@@ -58,7 +59,7 @@ class Player:
 	def revive(self):
 		self.alive = 1
 
-class deck:
+class Deck:
 	#all of the variables in the __init__ arejust integers that refer to the number of cards for that role
 	def __init__(self, villager, medium, foreseer, guard, hunter, prostitute, mason, owl, onionboy, cupid, sorcerer, wolves, wolf_son, white_wolf, wolf_seer):
 		self.villager = villager
@@ -76,3 +77,4 @@ class deck:
 		self.wolf_son = wolf_son
 		self.white_wolf = white_wolf
 		self.wolf_seer = wolf_seer
+		self.num_cards = villager + medium + foreseer + guard + hunter + prostitute + mason + owl + onionboy + cupid + sorcerer + wolves + wolf_son + white_wolf + wolf_seer

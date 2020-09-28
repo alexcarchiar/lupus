@@ -1,9 +1,8 @@
-######
-#main.py
-#(c) alexcarchiar
-#Code tailor made for lupus
-######
-
+'''
+main.py
+(c) alexcarchiar
+Code tailor made for lupus
+'''
 import cards
 
 def show_rules():
@@ -44,14 +43,47 @@ Ghosts (dead people) can't talk, or at least not about the game. They may open t
 No talking during the night.
 In case of a draw, there needs to be a runoff where you can vote only for the two (or three) people with most votes.""")
 
+roles_numbers = {
+	"villager" : 0,
+	"medium" : 0,
+	"foreseer" : 0,
+	"guard" : 0,
+	"hunter" : 0,
+	"prostitute" : 0,
+	"mason" : 0,
+	"owl" : 0,
+	"onionboy" : 0,
+	"cupid" : 0,
+	"sorcerer" : 0,
+	"wolves" : 0,
+	"wolf's son" : 0,
+	"white wolf" : 0,
+	"wolf seer" : 0
 
+}
 
 def main():
+	global roles_numbers
 	choice = None
 	print("Welcome to werewolves by alexcarchiar.\nThis program is used to help the narrator do his job, especially when there are no cards laying around")
-	choice = str(raw_input("Do you need to see the rules? Y\\N?"))
-	if(choice.isupper() == "Y"):
+	choice = str(input("Do you need to see the rules? Y\\N?"))
+	if(choice == "Y" or choice == "y"):
 		show_rules()
-	
+	print("You now have to give the numbers of the cards")
+	for key in roles_numbers:
+		roles_numbers[key] = int(input(key + ": "))
+
+	'''print("\n")
+	for key in roles_numbers:
+		print(roles_numbers[key])
+	'''
+	deck = cards.Deck(roles_numbers["villager"], roles_numbers["medium"], roles_numbers["foreseer"], roles_numbers["guard"], roles_numbers["hunter"], roles_numbers["prostitute"], roles_numbers["mason"], roles_numbers["owl"], roles_numbers["onionboy"], roles_numbers["cupid"], roles_numbers["sorcerer"], roles_numbers["wolves"], roles_numbers["wolf's son"], roles_numbers["white wolf"], roles_numbers["wolf seer"])
+
+	players = []
+	for i in range(0,deck.num_cards):
+		print("Player num: " + str(i+1))
+		name = str(input("Name: "))
+		players.append(cards.Player(name, i))
+		print("")
 
 main()
