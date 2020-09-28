@@ -44,3 +44,10 @@ The bad guys win when the wolves outnumber the good guys.
 - White wolf: a single wolf who is called once every two/threee turns (it depends on how many players are there) and has to kill
   all of the wolves and all of the good guys in order to win.
 - Wolf seer: it's just the wolves version of the foreseer.
+
+## Additional comments
+There very few rules:
+- Ghosts (dead people) can't talk, or at least not about the game. They may open their eyes during the night but this **must** be
+  explicitly agreed upon the beginning of a game. (of course, if the sorcerer is playing, we recommend the ghosts don't open their eyes).
+- No talking during the night.
+- In case of a draw, there needs to be a runoff where you can vote only for the two (or three) people with most votes.
