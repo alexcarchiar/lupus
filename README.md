@@ -15,6 +15,7 @@ their votes and decide who is a "lupus" (wolf in latin). The game ends when eith
 ## Roles
 
 #### Good guys
+The good guys win when there are no wolves left. These are the roles:
 - Villager: they have no powers. They have to guess the wolves and vote them out during the day.
 - Medium: he/she is called once every two turns. He/she can ask the narrator to reveal if one of the  
   dead players was good or bad.
@@ -31,6 +32,15 @@ their votes and decide who is a "lupus" (wolf in latin). The game ends when eith
   my friends happy.
 - Cupid: he/she decides two lovers that will be bound for the rest of the game: if one dies, the other one dies too.
   The two lovers can also be both good guys, one good guy and a bad guy and both bad guys.
+- Sorcerer: he/she has two potions, both for a one time use. One is to revive someone from the dead, the other one is
+  to instantly kill someone else.
 
 #### Bad guys
-- Wolves
+The bad guys win when the wolves outnumber the good guys.
+- Wolves: every night they are called and they decides who to devour (kill).
+- Wolf's son: he/she starts as a normal villager but if the wolves try and kill him/her, he/she does not die and becomes a wolf.
+  He/she is then activated. From the Medium or Foreseer's perspective, the Wolf's son is *always* a bad guy. Note that, if the
+  Wolf's son is not killed by the wolves during the night, he/she does not get activated.
+- White wolf: a single wolf who is called once every two/threee turns (it depends on how many players are there) and has to kill
+  all of the wolves and all of the good guys in order to win.
+- Wolf seer: it's just the wolves version of the foreseer.
