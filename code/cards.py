@@ -37,14 +37,18 @@ class Player:
 	def __init__(self, name, ide):
 		self.name = name
 		self.alive = 1
-		self.card = None
+		#self.card = 0
 		self.id = ide
+		self.role = ""
 
 	def give_card(self, card):
 		self.card = card
 
-	def show_card(self):
-		print("The player is a" + self.card.role + " . The card's id is: " + self.card.id)
+	def give_role(self, role):
+		self.role = role
+
+	def show_role(self):
+		print("The player is a" + str(self.role))
 
 	def is_alive(self):
 		#if(self.alive == 1):

@@ -4,6 +4,11 @@ main.py
 Code tailor made for lupus
 '''
 import cards
+from random import seed
+from random import randint
+from datetime import datetime
+
+seed(datetime.now())
 
 def show_rules():
 	print("""Made by alexcarchiar
@@ -85,5 +90,34 @@ def main():
 		name = str(input("Name: "))
 		players.append(cards.Player(name, i))
 		print("")
+
+	for key in roles_numbers:
+		for i in range(0, roles_numbers[key]):
+			player_given = randint(0, deck.num_cards - 1)
+			while (players[i].role != ""):
+				player_given += 1
+				if (player_given == deck.num_cards):
+					player_given = randint(0, deck.num_cards - 1)
+				else:
+					players[player_given].give_role(key)
+
+	'''cards_list = []
+	for key in roles_numbers:
+		for i in range(0, roles_numbers[key]):
+			#cards_list[i] = cards.Card(key, i)
+			cards_list.append(cards.Card(key, i))
+			player_given = randint(0, deck.num_cards-1)
+			while(players[i].card != None):
+				player_given += 1
+				if(player_given == deck.num_cards):
+					player_given = randint(0, deck.num_cards-1)
+				else:
+					players[player_given].give_card(cards_list[i])
+	'''
+	for i in range(0, deck.num_cards):
+		players[i].show_role()
+		print(players[i].role)
+
+	#for i in range(0, deck.num_cards):
 
 main()
